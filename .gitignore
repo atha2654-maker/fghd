@@ -9,5 +9,9 @@
 *.iml
 app/google-services.json
 
+<<<<<<< codex/create-complete-android-app-project-vande-mun-connect-4bf397
 # Keep PR code-only (no binaries)
+=======
+
+>>>>>>> main
 gradle/wrapper/gradle-wrapper.jar

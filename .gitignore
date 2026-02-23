@@ -1,0 +1,13 @@
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+*.iml
+app/google-services.json
+
+# Keep PR code-only (no binaries)
+gradle/wrapper/gradle-wrapper.jar

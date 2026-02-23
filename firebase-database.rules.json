@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "voiceSignals": {
+      "$channelId": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+-keep class com.google.firebase.** { *; }
+-dontwarn org.apache.poi.**
+-dontwarn org.webrtc.**
+-dontwarn io.agora.**

@@ -14,6 +14,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+<<<<<<< codex/create-complete-android-app-project-vande-mun-connect-4bf397
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.foundation.text.KeyboardOptions
+=======
+>>>>>>> main
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
@@ -31,9 +36,15 @@ fun LoginScreen(onNext: () -> Unit) {
         Text("Vande MUN Connect", fontWeight = FontWeight.Bold)
         Card(modifier = Modifier.fillMaxWidth().padding(top = 16.dp)) {
             Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+<<<<<<< codex/create-complete-android-app-project-vande-mun-connect-4bf397
+                OutlinedTextField(value = phone, onValueChange = { phone = it }, modifier = Modifier.fillMaxWidth(), label = { Text("Phone number (OTP)") }, keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone))
+                OutlinedTextField(value = email, onValueChange = { email = it }, modifier = Modifier.fillMaxWidth(), label = { Text("Email (code)") }, keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email))
+                Button(onClick = onNext, enabled = phone.isNotBlank() || email.isNotBlank(), modifier = Modifier.fillMaxWidth()) { Text("Send OTP / Code") }
+=======
                 OutlinedTextField(value = phone, onValueChange = { phone = it }, modifier = Modifier.fillMaxWidth(), label = { Text("Phone number (OTP)") })
                 OutlinedTextField(value = email, onValueChange = { email = it }, modifier = Modifier.fillMaxWidth(), label = { Text("Email (code)") })
                 Button(onClick = onNext, modifier = Modifier.fillMaxWidth()) { Text("Send OTP / Code") }
+>>>>>>> main
             }
         }
     }
@@ -48,7 +59,12 @@ fun VerificationScreen(onVerified: () -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text("Direct Code Verification")
+<<<<<<< codex/create-complete-android-app-project-vande-mun-connect-4bf397
+        OutlinedTextField(value = code, onValueChange = { code = it }, label = { Text("Enter verification code") }, keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number))
+        Button(onClick = onVerified, enabled = code.length >= 4, modifier = Modifier.padding(top = 16.dp)) { Text("Verify and Continue") }
+=======
         OutlinedTextField(value = code, onValueChange = { code = it }, label = { Text("Enter verification code") })
         Button(onClick = onVerified, modifier = Modifier.padding(top = 16.dp)) { Text("Verify and Continue") }
+>>>>>>> main
     }
 }

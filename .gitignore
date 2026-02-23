@@ -9,5 +9,5 @@
 *.iml
 app/google-services.json
 
-# Avoid committing Gradle wrapper binary in this repository policy
+
 gradle/wrapper/gradle-wrapper.jar

@@ -103,6 +103,7 @@ VandeMUNConnect/
    - `com.vandemunconnect`
 2. Download `google-services.json` into:
    - `app/google-services.json`
+
 3. Enable services:
    - Authentication: Phone + Email/Password (or Email Link/OOB strategy)
    - Firestore
@@ -131,17 +132,14 @@ VandeMUNConnect/
 4. For screen share, use foreground service + `MediaProjection` integration.
 
 
-## Repository Binary Policy
-- This repository intentionally does **not** commit binary files.
-- The Gradle wrapper JAR is excluded (`gradle/wrapper/gradle-wrapper.jar`).
-- Regenerate it locally when needed:
+
   - `gradle wrapper --gradle-version 8.14.3`
 
 ## Build Instructions (Android Studio)
 1. Open project in latest stable Android Studio.
 2. Let Gradle sync.
 3. Add `local.properties` if needed with SDK path.
-4. Add Firebase `google-services.json`.
+<
 5. Build debug APK:
    - **Build > Build Bundle(s) / APK(s) > Build APK(s)**
 

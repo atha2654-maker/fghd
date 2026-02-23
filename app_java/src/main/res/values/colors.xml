@@ -1,0 +1,6 @@
+<resources>
+    <color name="java_primary">#223A75</color>
+    <color name="java_primary_dark">#1A2D5D</color>
+    <color name="java_accent">#EAB861</color>
+    <color name="white">#FFFFFF</color>
+</resources>

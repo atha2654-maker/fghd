@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ScrollView
+        android:id="@+id/loginContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vande MUN Connect" android:textStyle="bold" android:textSize="24sp"/>
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Phone number" android:inputType="phone"/>
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Email" android:inputType="textEmailAddress"/>
+            <Button android:id="@+id/btnSendCode" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Send OTP / Code"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/verifyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Direct Verification" android:textStyle="bold"/>
+        <EditText android:id="@+id/etCode" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Code" android:inputType="number"/>
+        <Button android:id="@+id/btnVerify" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Verify"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:id="@+id/tabHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Conference, whiteboard, and screen-sharing scaffolds enabled."/>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/tabChat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="end">
+                    <Button android:id="@+id/btnVoiceCall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Voice"/>
+                    <Button android:id="@+id/btnVideoCall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Video"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvChat" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+                <EditText android:id="@+id/etChatInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Message"/>
+                <Button android:id="@+id/btnChatSend" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Send"/>
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/tabEvents"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                    <EditText android:id="@+id/etEventName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Event name"/>
+                    <EditText android:id="@+id/etEventLocation" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Location"/>
+                    <EditText android:id="@+id/etEventDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Date"/>
+                    <EditText android:id="@+id/etEventFee" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Fee"/>
+                    <EditText android:id="@+id/etEventLink" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Enrollment link"/>
+                    <Button android:id="@+id/btnAddEvent" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Add Event"/>
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvEvents" android:layout_width="match_parent" android:layout_height="300dp"/>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/tabPlanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <EditText android:id="@+id/etReminderTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Reminder title"/>
+                <EditText android:id="@+id/etReminderNote" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Reminder note"/>
+                <Button android:id="@+id/btnAddReminder" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Add Reminder"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvPlanner" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/tabProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                    <EditText android:id="@+id/etProfileName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Name"/>
+                    <EditText android:id="@+id/etProfilePortfolio" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Portfolio"/>
+                    <EditText android:id="@+id/etProfileCommittee" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Committee"/>
+                    <EditText android:id="@+id/etProfileContact" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Contact"/>
+                    <EditText android:id="@+id/etProfileBio" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Bio"/>
+                    <EditText android:id="@+id/etProfileWhatsapp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="WhatsApp delegation"/>
+                    <Button android:id="@+id/btnSaveProfile" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save Profile"/>
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_menu"/>
+    </LinearLayout>
+
+</LinearLayout>

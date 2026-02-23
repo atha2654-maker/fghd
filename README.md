@@ -103,7 +103,7 @@ VandeMUNConnect/
    - `com.vandemunconnect`
 2. Download `google-services.json` into:
    - `app/google-services.json`
-   - Note: project sync/build works without this file, but Firebase runtime features require it.
+
 3. Enable services:
    - Authentication: Phone + Email/Password (or Email Link/OOB strategy)
    - Firestore
@@ -133,16 +133,13 @@ VandeMUNConnect/
 
 
 
-## Code-only PR Note
-- This repository can be kept code-only for pull requests (no committed binaries).
-- If `gradle/wrapper/gradle-wrapper.jar` is missing locally, regenerate wrapper files with:
   - `gradle wrapper --gradle-version 8.14.3`
 
 ## Build Instructions (Android Studio)
 1. Open project in latest stable Android Studio.
 2. Let Gradle sync.
 3. Add `local.properties` if needed with SDK path.
-4. (Recommended) Add Firebase `google-services.json` for full Firebase runtime configuration.
+<
 5. Build debug APK:
    - **Build > Build Bundle(s) / APK(s) > Build APK(s)**
 

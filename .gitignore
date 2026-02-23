@@ -9,5 +9,5 @@
 *.iml
 app/google-services.json
 
-# Keep PR code-only (no binaries)
+
 gradle/wrapper/gradle-wrapper.jar

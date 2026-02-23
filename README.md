@@ -1,3 +1,4 @@
+<<<<<<< codex/create-complete-android-app-project-vande-mun-connect-pknlt0
 # Vande MUN Connect (Android Studio + Kotlin + Jetpack Compose)
 
 A complete, MVVM-structured Android Studio project scaffold for a modern MUN community app with Firebase backend integration.
@@ -169,3 +170,5 @@ VandeMUNConnect/
 - Java app flow is now implemented in **one file only** (`MainActivity.java`) with programmatic screens for login, OTP/code verify, dashboard tabs, chat/events/planner/profile actions.
 - No additional Java model/adapter files are required for this module.
 
+=======
+>>>>>>> main
